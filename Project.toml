@@ -3,6 +3,18 @@ uuid = "d310f9bc-11a0-4cd7-a7e5-001710d1a948"
 authors = ["FedeClaudi <federicoclaudi@protonmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+LibGit2 = "76f85450-5226-5b5a-8eaa-529ad045b433"
+MyterialColors = "1c23619d-4212-4747-83aa-717207fae70f"
+ObjectivePaths = "f54fc8bb-b7bf-4bdb-b2c8-0a06351fc134"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+Term = "22787eb5-b846-44ae-b979-8e399b8463ab"
+UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+YAML = "ddb6d928-2868-570f-bddf-ab3f9cf99eb6"
+
 [compat]
 julia = "1"
 
