@@ -186,8 +186,19 @@ update_metadata!(metadata::AbstractDict)::AbstractDict
 Remove obsolete entries pointing to files that no longer exist.
 """
 function update_metadata!(metadata::AbstractDict)::AbstractDict
+
+    "folder" ∉ keys(metadata) && begin
+        @warn "Metadata does not contain folder key - cannot update"
+        return metadata
+    end
+
     kept = []
     for (k, meta) in metadata
+        "folder" ∉ keys(meta) && begin
+            push!(kept, k)
+            continue
+        end
+
         dest = Folder(meta["folder"]) / k
         exists(dest) &&  push!(kept, k)
     end
