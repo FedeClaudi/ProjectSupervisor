@@ -197,7 +197,9 @@ function update_metadata!(metadata::AbstractDict)::AbstractDict
     removed = length(metadata) - length(kept)
     removed > 0 && println("Removed $removed obsolete entries from metadata")
 
-    metadata = Dict(k => metadata[k] for k in kept)       
+    metadata = Dict(k => metadata[k] for k in kept)   
+    YAML.write_file(sup.metadatafile.path, metadata)
+    
     return metadata
 end
 
